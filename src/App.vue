@@ -98,6 +98,9 @@ export default {
 
     diagram.factory.createDiagramLink(node1, node2);
 
+	// automatically route links drawn by user
+	diagram.routeLinks = true;
+
     // stock shape geometries are listed here:
     // https://www.mindfusion.eu/onlinehelp/jsdiagram/CC_refTable_of_Predefined_Shapes_4.htm
 

@@ -27,7 +27,8 @@
               ref="diagramViewRef"
               id="diagram1"
               :diagram="diagram"
-              linkBackId = "mindfusionLink"
+              linkBackId="mindfusionLink"
+			  v-bind:routeLinks="true"
               v-on:link-creating="onLinkCreating"
               v-on:node-created="onNodeCreated"
               :style="{
@@ -97,9 +98,6 @@ export default {
     node2.text = "World";
 
     diagram.factory.createDiagramLink(node1, node2);
-
-	// automatically route links drawn by user
-	diagram.routeLinks = true;
 
     // stock shape geometries are listed here:
     // https://www.mindfusion.eu/onlinehelp/jsdiagram/CC_refTable_of_Predefined_Shapes_4.htm
